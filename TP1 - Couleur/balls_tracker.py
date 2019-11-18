@@ -80,7 +80,6 @@ def track(image):
 
 # Test with input from camera
 if __name__ == '__main__':
-
     capture = cv2.VideoCapture('ball2.mp4')
 
     while True:
