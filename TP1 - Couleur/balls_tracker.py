@@ -84,11 +84,9 @@ if __name__ == '__main__':
     capture = cv2.VideoCapture('ball2.mp4')
 
     while True:
-
         okay, image = capture.read()
 
         if okay:
-
             if not track(image):
                 break
           
@@ -96,7 +94,6 @@ if __name__ == '__main__':
                 break
 
         else:
-
            print('Capture failed')
            break
 
