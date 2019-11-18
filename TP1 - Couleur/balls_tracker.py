@@ -86,13 +86,12 @@ if __name__ == '__main__':
     while True:
         okay, image = capture.read()
 
-        if okay:
-            if not track(image):
-                break
-          
-            if cv2.waitKey(1) & 0xFF == 27:
-                break
-        else:
+        if not okay:
            print('Capture failed')
            break
 
+        if not track(image):
+            break
+        
+        if cv2.waitKey(1) & 0xFF == 27:
+            break
